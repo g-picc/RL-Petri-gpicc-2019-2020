@@ -1,5 +1,5 @@
 -- Progetto di Reti Logiche
--- Matricola: 889019
+-- Matricola: 889019 & 889885
 
 library ieee;
 use ieee.std_logic_1164.all;
