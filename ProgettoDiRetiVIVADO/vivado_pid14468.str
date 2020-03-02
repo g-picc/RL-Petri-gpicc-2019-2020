@@ -115,3 +115,19 @@ selectCodeEditor("10569751.vhd", 204, 26); // ch (w, cr)
 // HMemoryUtils.trashcanNow. Engine heap size: 785 MB. GUI used memory: 57 MB. Current time: 3/2/20, 9:11:47 PM CET
 // WARNING: HEventQueue.dispatchEvent() is taking  3057992 ms.
 // HMemoryUtils.trashcanNow. Engine heap size: 785 MB. GUI used memory: 57 MB. Current time: 3/2/20, 10:20:04 PM CET
+<<<<<<< Updated upstream
+=======
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 785 MB. GUI used memory: 52 MB. Current time: 3/2/20, 10:50:05 PM CET
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+>>>>>>> Stashed changes
