@@ -21,10 +21,9 @@ entity project_reti_logiche is
 end project_reti_logiche;
 
 architecture Behavioral of project_reti_logiche is
-	type state_type is (AttendiStart, RichiestaIndirizzo, SalvataggioIndirizzo, Analisi, CaricaNoWZ, CaricaWZ, ScriviInMemoria, AlzaDone, AspettaStart);
+	type state_type is (AttendiStart, RichiestaIndirizzo, SalvataggioIndirizzo, Analisi, Codifica, ScriviInMemoria, AlzaDone, AspettaStart);
 	begin
 		process(i_clk, i_rst)
-			
 		begin
 		
 		end process;
