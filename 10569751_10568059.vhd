@@ -104,7 +104,7 @@ architecture Behavioral of project_reti_logiche is
 							-- passa a SAVE
 							o_en <= '1';
 							o_we <= '0';
-							o_address <= std_logic_vector(to_unsigned(count, addr'length));
+							o_address <= std_logic_vector(to_unsigned(count, o_address'length));
 							current_state <= SAVE;
 						when SAVE =>
 							-- passa a ASK se count <= 7 altrimenti a ASK_ADDR
