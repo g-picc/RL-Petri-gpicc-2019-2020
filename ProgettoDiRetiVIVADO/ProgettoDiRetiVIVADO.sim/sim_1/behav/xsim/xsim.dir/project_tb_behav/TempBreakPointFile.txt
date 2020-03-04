@@ -1,14 +1,1 @@
 Breakpoint File Version 1.0
-95 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-100 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-108 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-130 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-134 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-141 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-245 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-257 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-261 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-265 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-269 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-272 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd
-275 true C:/Users/Marco/OneDrive/Documenti/05. University/Anno 3/Appunti digitali/Reti logiche -Prova Finale-/progettoReti/10569751_10568059.vhd

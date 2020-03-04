@@ -22,7 +22,7 @@ end project_reti_logiche;
 
 architecture Behavioral of project_reti_logiche is
 	-- definizione dei tipi necessari
-	type state_type is (IDLE, ASK, SAVE, ASK_ADDR, ANALIZE, ENC_WRT, DONE, WAIT1);
+	type state_type is (IDLE, ASK, SAVE, ASK_ADDR, ANALIZE, ENC_WRT, DONE, WAIT1, PROVA, PROVA2, PROVA3);
 	
 	-- segnali utili ai fini del progetto
 	signal current_state : state_type;
@@ -79,7 +79,7 @@ architecture Behavioral of project_reti_logiche is
 	begin
 		process(i_clk, i_rst)
 			begin
-				if (i_rst'event and i_rst = '1') then
+				if (i_rst = '1') then
 					o_done <= '0';
 					wz0 <= "00000000";
 					wz1 <= "00000000";
@@ -90,7 +90,7 @@ architecture Behavioral of project_reti_logiche is
 					wz6 <= "00000000";
 					wz7 <= "00000000";
 					addr <= "00000000";
-					encoded <= "00000000";
+					encoded <= "00000000"; o_address <= "0000000000000000"; o_done <= '0'; o_en <= '0'; o_we <= '0'; o_data <= "00000000";
 					count <= 0;
 					current_state <= IDLE;
 				elsif (i_clk'event and i_clk = '1') then 
@@ -104,8 +104,10 @@ architecture Behavioral of project_reti_logiche is
 							-- passa a SAVE
 							o_en <= '1';
 							o_we <= '0';
-							o_address <= std_logic_vector(to_unsigned(count, o_address'length));
-							current_state <= SAVE;
+							o_address <= std_logic_vector(to_unsigned(count, 16));
+							current_state <= PROVA;
+						when PROVA =>
+						    current_state <= SAVE;
 						when SAVE =>
 							-- passa a ASK se count <= 7 altrimenti a ASK_ADDR
 							o_en <= '0';
@@ -138,7 +140,7 @@ architecture Behavioral of project_reti_logiche is
 							o_en <= '1';
 							o_we <= '0';
 							o_address <= "0000000000001000";
-							current_state <= ANALIZE;
+							current_state <= PROVA2;
 						when ANALIZE =>
 							-- passa a ENC_WRT
 							o_en <= '0';
@@ -252,9 +254,13 @@ architecture Behavioral of project_reti_logiche is
 							end if;
 							o_en <= '1';
 							o_we <= '1';
-							o_data <= encoded;
 							o_address <= "0000000000001001";
-							current_state <= DONE;
+							current_state <= PROVA3;
+						when PROVA2 =>
+						    current_state <= ANALIZE;
+                        when PROVA3 =>
+                            o_data <= encoded;
+                            current_state <= DONE;
 						when DONE =>
 							-- rimani su DONE se start = 1, se start = 0 vai a WAIT1
 							o_done <= '1';
