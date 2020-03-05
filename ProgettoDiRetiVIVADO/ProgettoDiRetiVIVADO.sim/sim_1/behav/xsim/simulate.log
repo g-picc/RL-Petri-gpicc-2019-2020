@@ -1,5 +1,16 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
+Stopped at time : 2950 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 143
+Stopped at time : 3050 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 262
+Stopped at time : 3150 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 146
+Stopped at time : 3250 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 149
+Stopped at time : 3250 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 150
+Stopped at time : 3250 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 162
+Stopped at time : 3250 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 174
+Stopped at time : 3250 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 186
+Stopped at time : 3250 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 187
+Stopped at time : 3250 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 194
+Stopped at time : 3350 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd" Line 260
 Failure: Simulation Ended!, TEST PASSATO
-Time: 3550 ns  Iteration: 2  Process: /project_tb/test  File: C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/Test_OUT_WZ/test_out_0.vhd
-$finish called at time : 3550 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/Test_OUT_WZ/test_out_0.vhd" Line 103
+Time: 3750 ns  Iteration: 0  Process: /project_tb/test  File: C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/TestBench_IN_WZ.vhd
+$finish called at time : 3750 ns : File "C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/TestBench_IN_WZ.vhd" Line 104

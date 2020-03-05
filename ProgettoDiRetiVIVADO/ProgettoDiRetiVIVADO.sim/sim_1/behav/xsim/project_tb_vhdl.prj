@@ -1,7 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../../10569751_10568059.vhd" \
-"../../../../../../Test_OUT_WZ/test_out_0.vhd" \
+"../../../../../../TestBench_IN_WZ.vhd" \
 
 # Do not sort compile order
 nosort

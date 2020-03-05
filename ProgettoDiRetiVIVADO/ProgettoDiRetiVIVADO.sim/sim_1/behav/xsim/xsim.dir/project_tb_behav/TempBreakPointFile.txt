@@ -1,1 +1,15 @@
 Breakpoint File Version 1.0
+143 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+146 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+260 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+149 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+186 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+187 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+190 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+192 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+194 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+196 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+262 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+174 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+162 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd
+150 true C:/Users/Marco/OneDrive/Documenti/05_University/Anno_3/Appunti_digitali/Reti_logiche_-Prova_Finale-/progettoReti/10569751_10568059.vhd

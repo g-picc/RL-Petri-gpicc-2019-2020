@@ -22,7 +22,7 @@ end project_reti_logiche;
 
 architecture Behavioral of project_reti_logiche is
 	-- definizione dei tipi necessari
-	type state_type is (IDLE, ASK, SAVE, ASK_ADDR, ANALIZE, ENC_WRT, DONE, WAIT1, PROVA, PROVA2, PROVA3);
+	type state_type is (IDLE, ASK, SAVE, ASK_ADDR, ANALIZE, ENC_WRT, DONE, WAIT1, PROVA, PROVA2, PROVA3, PROVA4);
 	
 	-- segnali utili ai fini del progetto
 	signal current_state : state_type;
@@ -141,11 +141,13 @@ architecture Behavioral of project_reti_logiche is
 							o_we <= '0';
 							o_address <= "0000000000001000";
 							current_state <= PROVA2;
+						when PROVA4 =>
+						    addr <= i_data;
+						    current_state <= ANALIZE;
 						when ANALIZE =>
 							-- passa a ENC_WRT
 							o_en <= '0';
-							addr <= i_data;
-							if (unsigned(addr)-unsigned(wz0) >= 0 and unsigned(addr)-unsigned(wz0) <= 3) then
+							if (unsigned(addr)-unsigned(wz0) >= "00000000" and unsigned(addr)-unsigned(wz0) <= "00000011") then
 								WZ_BIT <= '1';
 								WZ_NUM <= "000";
 								if (unsigned(addr)-unsigned(wz0) = 0) then 
@@ -184,11 +186,11 @@ architecture Behavioral of project_reti_logiche is
 							elsif (unsigned(addr)-unsigned(wz3) >= 0 and unsigned(addr)-unsigned(wz3) <= 3) then
 								WZ_BIT <= '1';
 								WZ_NUM <= "011";
-								if (unsigned(addr)-unsigned(wz3) = 0) then 
+								if ((unsigned(addr) - unsigned(wz3)) = "00000000") then 
 									WZ_OFFSET <= "0001";
-								elsif (unsigned(addr)-unsigned(wz3) = 1) then 
+								elsif ((unsigned(addr) - unsigned(wz3)) = "00000001") then 
 									WZ_OFFSET <= "0010";
-								elsif (unsigned(addr)-unsigned(wz3) = 2) then 
+								elsif ((unsigned(addr) - unsigned(wz3)) = "00000010") then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
@@ -257,7 +259,7 @@ architecture Behavioral of project_reti_logiche is
 							o_address <= "0000000000001001";
 							current_state <= PROVA3;
 						when PROVA2 =>
-						    current_state <= ANALIZE;
+						    current_state <= PROVA4;
                         when PROVA3 =>
                             o_data <= encoded;
                             current_state <= DONE;
