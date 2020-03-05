@@ -143,7 +143,7 @@ architecture Behavioral of project_reti_logiche is
 							current_state <= PROVA2;
 						when PROVA4 =>
 						    addr <= i_data;
-						    current_state <= ANALIZE;
+						    current_state <= ANALIZE; 
 						when ANALIZE =>
 							-- passa a ENC_WRT
 							o_en <= '0';
