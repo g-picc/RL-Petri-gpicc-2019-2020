@@ -1,5 +1,6 @@
--- Progetto di Reti Logiche
--- Matricola: 889019 & 889885
+-- Progetto di Reti Logiche a.a. 2019/2020
+-- Prof. Gianluca Palermo
+-- Studenti (Codici Persona): Marco Petri (10569751) e Giuseppe Piccirillo (10568059)
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -22,7 +23,7 @@ end project_reti_logiche;
 
 architecture Behavioral of project_reti_logiche is
 	-- definizione dei tipi necessari
-	type state_type is (IDLE, ASK, SAVE, ASK_ADDR, ANALIZE, ENC_WRT, DONE, WAIT1, PROVA, PROVA2, PROVA3, PROVA4);
+	type state_type is (IDLE, ASK, SAVE, ASK_ADDR, ANALIZE, ENC_WRT, DONE, WAIT1, WAIT_MEM1, WAIT_MEM2, WAIT_MEM3);
 	
 	-- segnali utili ai fini del progetto
 	signal current_state : state_type;
@@ -35,46 +36,6 @@ architecture Behavioral of project_reti_logiche is
 	-- segnali costanti necessari per il progetto
 	constant Nwz : integer range 0 to 8:= 8;
 	constant Dwz : integer range 0 to 4 := 4;
-	
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	--		RICORDA ADDR DA CHIEDERE
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
-	-------------------------------------------------------
 	
 	begin
 		process(i_clk, i_rst)
@@ -105,8 +66,8 @@ architecture Behavioral of project_reti_logiche is
 							o_en <= '1';
 							o_we <= '0';
 							o_address <= std_logic_vector(to_unsigned(count, 16));
-							current_state <= PROVA;
-						when PROVA =>
+							current_state <= WAIT_MEM1;
+						when WAIT_MEM1 =>
 						    current_state <= SAVE;
 						when SAVE =>
 							-- passa a ASK se count <= 7 altrimenti a ASK_ADDR
@@ -140,10 +101,9 @@ architecture Behavioral of project_reti_logiche is
 							o_en <= '1';
 							o_we <= '0';
 							o_address <= "0000000000001000";
-							current_state <= PROVA2;
-						--when PROVA4 =>
-						    --addr <= i_data;
-						    --current_state <= ANALIZE;
+							current_state <= WAIT_MEM2;
+						when WAIT_MEM2 =>
+						    current_state <= ANALIZE;
 						when ANALIZE =>
 							-- passa a ENC_WRT
 							addr <= i_data;
@@ -258,10 +218,8 @@ architecture Behavioral of project_reti_logiche is
 							o_en <= '1';
 							o_we <= '1';
 							o_address <= "0000000000001001";
-							current_state <= PROVA3;
-						when PROVA2 =>
-						    current_state <= ANALIZE;
-                        when PROVA3 =>
+							current_state <= WAIT_MEM3;
+                        when WAIT_MEM3 =>
                             o_data <= encoded;
                             current_state <= DONE;
 						when DONE =>
