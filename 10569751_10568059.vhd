@@ -141,104 +141,105 @@ architecture Behavioral of project_reti_logiche is
 							o_we <= '0';
 							o_address <= "0000000000001000";
 							current_state <= PROVA2;
-						when PROVA4 =>
-						    addr <= i_data;
-						    current_state <= ANALIZE;
+						--when PROVA4 =>
+						    --addr <= i_data;
+						    --current_state <= ANALIZE;
 						when ANALIZE =>
 							-- passa a ENC_WRT
+							addr <= i_data;
 							o_en <= '0';
-							if (unsigned(addr)-unsigned(wz0) >= "00000000" and unsigned(addr)-unsigned(wz0) <= "00000011") then
+							if (unsigned(i_data)-unsigned(wz0) >= "00000000" and unsigned(i_data)-unsigned(wz0) <= "00000011") then
 								WZ_BIT <= '1';
 								WZ_NUM <= "000";
-								if (unsigned(addr)-unsigned(wz0) = 0) then 
+								if (unsigned(i_data)-unsigned(wz0) = 0) then 
 									WZ_OFFSET <= "0001";
-								elsif (unsigned(addr)-unsigned(wz0) = 1) then 
+								elsif (unsigned(i_data)-unsigned(wz0) = 1) then 
 									WZ_OFFSET <= "0010";
-								elsif (unsigned(addr)-unsigned(wz0) = 2) then 
+								elsif (unsigned(i_data)-unsigned(wz0) = 2) then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
 								end if;
-							elsif (unsigned(addr)-unsigned(wz1) >= 0 and unsigned(addr)-unsigned(wz1) <= 3) then
+							elsif (unsigned(i_data)-unsigned(wz1) >= 0 and unsigned(i_data)-unsigned(wz1) <= 3) then
 								WZ_BIT <= '1';
 								WZ_NUM <= "001";
-								if (unsigned(addr)-unsigned(wz1) = 0) then 
+								if (unsigned(i_data)-unsigned(wz1) = 0) then 
 									WZ_OFFSET <= "0001";
-								elsif (unsigned(addr)-unsigned(wz1) = 1) then 
+								elsif (unsigned(i_data)-unsigned(wz1) = 1) then 
 									WZ_OFFSET <= "0010";
-								elsif (unsigned(addr)-unsigned(wz1) = 2) then 
+								elsif (unsigned(i_data)-unsigned(wz1) = 2) then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
 								end if;
-							elsif (unsigned(addr)-unsigned(wz2) >= 0 and unsigned(addr)-unsigned(wz2) <= 3) then
+							elsif (unsigned(i_data)-unsigned(wz2) >= 0 and unsigned(i_data)-unsigned(wz2) <= 3) then
 								WZ_BIT <= '1';
 								WZ_NUM <= "010";
-								if (unsigned(addr)-unsigned(wz2) = 0) then 
+								if (unsigned(i_data)-unsigned(wz2) = 0) then 
 									WZ_OFFSET <= "0001";
-								elsif (unsigned(addr)-unsigned(wz2) = 1) then 
+								elsif (unsigned(i_data)-unsigned(wz2) = 1) then 
 									WZ_OFFSET <= "0010";
-								elsif (unsigned(addr)-unsigned(wz2) = 2) then 
+								elsif (unsigned(i_data)-unsigned(wz2) = 2) then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
 								end if;
-							elsif (unsigned(addr)-unsigned(wz3) >= 0 and unsigned(addr)-unsigned(wz3) <= 3) then
+							elsif (unsigned(i_data)-unsigned(wz3) >= 0 and unsigned(i_data)-unsigned(wz3) <= 3) then
 								WZ_BIT <= '1';
 								WZ_NUM <= "011";
-								if ((unsigned(addr) - unsigned(wz3)) = "00000000") then 
+								if ((unsigned(i_data) - unsigned(wz3)) = "00000000") then 
 									WZ_OFFSET <= "0001";
-								elsif ((unsigned(addr) - unsigned(wz3)) = "00000001") then 
+								elsif ((unsigned(i_data) - unsigned(wz3)) = "00000001") then 
 									WZ_OFFSET <= "0010";
-								elsif ((unsigned(addr) - unsigned(wz3)) = "00000010") then 
+								elsif ((unsigned(i_data) - unsigned(wz3)) = "00000010") then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
 								end if;
-							elsif (unsigned(addr)-unsigned(wz4) >= 0 and unsigned(addr)-unsigned(wz4) <= 3) then
+							elsif (unsigned(i_data)-unsigned(wz4) >= 0 and unsigned(i_data)-unsigned(wz4) <= 3) then
 								WZ_BIT <= '1';
 								WZ_NUM <= "100";
-								if (unsigned(addr)-unsigned(wz4) = 0) then 
+								if (unsigned(i_data)-unsigned(wz4) = 0) then 
 									WZ_OFFSET <= "0001";
-								elsif (unsigned(addr)-unsigned(wz4) = 1) then 
+								elsif (unsigned(i_data)-unsigned(wz4) = 1) then 
 									WZ_OFFSET <= "0010";
-								elsif (unsigned(addr)-unsigned(wz4) = 2) then 
+								elsif (unsigned(i_data)-unsigned(wz4) = 2) then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
 								end if;
-							elsif (unsigned(addr)-unsigned(wz5) >= 0 and unsigned(addr)-unsigned(wz5) <= 3) then
+							elsif (unsigned(i_data)-unsigned(wz5) >= 0 and unsigned(i_data)-unsigned(wz5) <= 3) then
 								WZ_BIT <= '1';
 								WZ_NUM <= "101";
-								if (unsigned(addr)-unsigned(wz5) = 0) then 
+								if (unsigned(i_data)-unsigned(wz5) = 0) then 
 									WZ_OFFSET <= "0001";
-								elsif (unsigned(addr)-unsigned(wz5) = 1) then 
+								elsif (unsigned(i_data)-unsigned(wz5) = 1) then 
 									WZ_OFFSET <= "0010";
-								elsif (unsigned(addr)-unsigned(wz5) = 2) then 
+								elsif (unsigned(i_data)-unsigned(wz5) = 2) then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
 								end if;
-							elsif (unsigned(addr)-unsigned(wz6) >= 0 and unsigned(addr)-unsigned(wz6) <= 3) then
+							elsif (unsigned(i_data)-unsigned(wz6) >= 0 and unsigned(i_data)-unsigned(wz6) <= 3) then
 								WZ_BIT <= '1';
 								WZ_NUM <= "110";
-								if (unsigned(addr)-unsigned(wz6) = 0) then 
+								if (unsigned(i_data)-unsigned(wz6) = 0) then 
 									WZ_OFFSET <= "0001";
-								elsif (unsigned(addr)-unsigned(wz6) = 1) then 
+								elsif (unsigned(i_data)-unsigned(wz6) = 1) then 
 									WZ_OFFSET <= "0010";
-								elsif (unsigned(addr)-unsigned(wz6) = 2) then 
+								elsif (unsigned(i_data)-unsigned(wz6) = 2) then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
 								end if;
-							elsif (unsigned(addr)-unsigned(wz7) >= 0 and unsigned(addr)-unsigned(wz7) <= 3) then
+							elsif (unsigned(i_data)-unsigned(wz7) >= 0 and unsigned(i_data)-unsigned(wz7) <= 3) then
 								WZ_BIT <= '1';
 								WZ_NUM <= "111";
-								if (unsigned(addr)-unsigned(wz7) = 0) then 
+								if (unsigned(i_data)-unsigned(wz7) = 0) then 
 									WZ_OFFSET <= "0001";
-								elsif (unsigned(addr)-unsigned(wz7) = 1) then 
+								elsif (unsigned(i_data)-unsigned(wz7) = 1) then 
 									WZ_OFFSET <= "0010";
-								elsif (unsigned(addr)-unsigned(wz7) = 2) then 
+								elsif (unsigned(i_data)-unsigned(wz7) = 2) then 
 									WZ_OFFSET <= "0100";
 								else
 									WZ_OFFSET <= "1000";
@@ -259,7 +260,7 @@ architecture Behavioral of project_reti_logiche is
 							o_address <= "0000000000001001";
 							current_state <= PROVA3;
 						when PROVA2 =>
-						    current_state <= PROVA4;
+						    current_state <= ANALIZE;
                         when PROVA3 =>
                             o_data <= encoded;
                             current_state <= DONE;
