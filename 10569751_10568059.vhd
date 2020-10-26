@@ -1,6 +1,6 @@
 -- Progetto di Reti Logiche a.a. 2019/2020
 -- Prof. Gianluca Palermo
--- Studenti (Codici Persona): Marco Petri (10569751) e Giuseppe Piccirillo (10568059)
+-- Studenti (Codici Persona): Marco Petri (10569751) e g-picc
 
 library ieee;
 use ieee.std_logic_1164.all;
